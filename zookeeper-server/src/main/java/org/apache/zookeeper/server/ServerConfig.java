@@ -106,7 +106,7 @@ public class ServerConfig {
 
     public InetSocketAddress getClientPortAddress() {
         LOG.warn("[CTEST][GET-PARAM] clientPortAddress");
-        System.out.println("[CTEST][GET-PARAM][STDOUT][STDOUT] clientPortAddress");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] clientPortAddress");
         return clientPortAddress;
     }
     public InetSocketAddress getSecureClientPortAddress() {
