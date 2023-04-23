@@ -372,6 +372,7 @@ public class QuorumPeerConfig {
         }
 
         LOG.warn("[CTEST][GET-PARAM] clientPort");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] clientPort");
         if (clientPort == 0) {
             LOG.info("clientPort is not set");
             if (clientPortAddress != null) {
@@ -387,6 +388,7 @@ public class QuorumPeerConfig {
         }
 
         LOG.warn("[CTEST][GET-PARAM] secureClientPort");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] secureClientPort");
         if (secureClientPort == 0) {
             LOG.info("secureClientPort is not set");
             if (secureClientPortAddress != null) {
@@ -746,46 +748,113 @@ public class QuorumPeerConfig {
         return stacktrace;
     }
 
-    public InetSocketAddress getClientPortAddress() { LOG.warn("[CTEST][GET-PARAM] clientPortAddress"); return clientPortAddress; }
-    public InetSocketAddress getSecureClientPortAddress() { LOG.warn("[CTEST][GET-PARAM] secureClientPortAddress"); return secureClientPortAddress; }
-    public File getDataDir() { LOG.warn("[CTEST][GET-PARAM] dataDir"); return dataDir; }
-    public File getDataLogDir() { LOG.warn("[CTEST][GET-PARAM] dataLogDir"); return dataLogDir; }
-    public int getTickTime() { LOG.warn("[CTEST][GET-PARAM] tickTime"); return tickTime; }
-    public int getMaxClientCnxns() { LOG.warn("[CTEST][GET-PARAM] maxClientCnxns"); return maxClientCnxns; }
-    public int getMinSessionTimeout() { LOG.warn("[CTEST][GET-PARAM] minSessionTimeout"); return minSessionTimeout; }
-    public int getMaxSessionTimeout() { LOG.warn("[CTEST][GET-PARAM] maxSessionTimeout"); return maxSessionTimeout; }
-    public boolean areLocalSessionsEnabled() { LOG.warn("[CTEST][GET-PARAM] localSessionsEnabled"); return localSessionsEnabled; }
+    public InetSocketAddress getClientPortAddress() {
+        LOG.warn("[CTEST][GET-PARAM] clientPortAddress");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] clientPortAddress");
+        return clientPortAddress; 
+    }
+
+    public InetSocketAddress getSecureClientPortAddress() {
+        LOG.warn("[CTEST][GET-PARAM] secureClientPortAddress");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] secureClientPortAddress");
+        return secureClientPortAddress;
+    }
+
+    public File getDataDir() {
+        LOG.warn("[CTEST][GET-PARAM] dataDir");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] dataDir");
+        return dataDir;
+    }
+
+    public File getDataLogDir() {
+        LOG.warn("[CTEST][GET-PARAM] dataLogDir");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] dataLogDir");
+        return dataLogDir;
+    }
+
+    public int getTickTime() {
+        LOG.warn("[CTEST][GET-PARAM] tickTime");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] tickTime");
+        return tickTime; 
+    }
+
+    public int getMaxClientCnxns() {
+        LOG.warn("[CTEST][GET-PARAM] maxClientCnxns");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] maxClientCnxns");
+        return maxClientCnxns;
+    }
+
+    public int getMinSessionTimeout() {
+        LOG.warn("[CTEST][GET-PARAM] minSessionTimeout");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] minSessionTimeout");
+        return minSessionTimeout;
+    }
+
+    public int getMaxSessionTimeout() {
+        LOG.warn("[CTEST][GET-PARAM] maxSessionTimeout");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] maxSessionTimeout");
+        return maxSessionTimeout;
+    }
+
+    public boolean areLocalSessionsEnabled() {
+        LOG.warn("[CTEST][GET-PARAM] localSessionsEnabled");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] localSessionsEnabled");
+        return localSessionsEnabled;
+    }
     public boolean isLocalSessionsUpgradingEnabled() {
         LOG.warn("[CTEST][GET-PARAM] localSessionsUpgradingEnabled");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] localSessionsUpgradingEnabled");
         return localSessionsUpgradingEnabled;
     }
     public boolean isSslQuorum() {
         LOG.warn("[CTEST][GET-PARAM] sslQuorum");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] sslQuorum");
         return sslQuorum;
     }
 
     public boolean shouldUsePortUnification() {
         LOG.warn("[CTEST][GET-PARAM] portUnification");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] portUnification");
         return shouldUsePortUnification;
     }
 
-    public int getInitLimit() { LOG.warn("[CTEST][GET-PARAM] initLimit"); return initLimit; }
-    public int getSyncLimit() { LOG.warn("[CTEST][GET-PARAM] syncLimit"); return syncLimit; }
-    public int getElectionAlg() { LOG.warn("[CTEST][GET-PARAM] electionAlg");  return electionAlg; }
-    public int getElectionPort() { return electionPort; }
+    public int getInitLimit() {
+        LOG.warn("[CTEST][GET-PARAM] initLimit");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] initLimit");
+        return initLimit;
+    }
+
+    public int getSyncLimit() {
+        LOG.warn("[CTEST][GET-PARAM] syncLimit");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] syncLimit");
+        return syncLimit;
+    }
+
+    public int getElectionAlg() {
+        LOG.warn("[CTEST][GET-PARAM] electionAlg");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] electionAlg");
+        return electionAlg;
+    }
+
+    public int getElectionPort() {
+        return electionPort;
+    }
 
     public int getSnapRetainCount() {
         LOG.warn("[CTEST][GET-PARAM] autopurge.snapRetainCount");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] autopurge.snapRetainCount");
         return snapRetainCount;
     }
 
     public int getPurgeInterval() {
         LOG.warn("[CTEST][GET-PARAM] autopurge.purgeInterval");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] autopurge.purgeInterval");
         return purgeInterval;
     }
     
     public boolean getSyncEnabled() {
         LOG.warn("[CTEST][GET-PARAM] syncEnabled");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] syncEnabled");
         return syncEnabled;
     }
 
@@ -810,6 +879,7 @@ public class QuorumPeerConfig {
 
     public LearnerType getPeerType() {
         LOG.warn("[CTEST][GET-PARAM] peerType");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] peerType");
         return peerType;
     }
 
@@ -819,16 +889,19 @@ public class QuorumPeerConfig {
     
     public Boolean getQuorumListenOnAllIPs() {
         LOG.warn("[CTEST][GET-PARAM] quorumListenOnAllIPs");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] quorumListenOnAllIPs");
         return quorumListenOnAllIPs;
     }
  
     public static boolean isStandaloneEnabled() {
         LOG.warn("[CTEST][GET-PARAM] standaloneEnabled");
-	return standaloneEnabled;
+        System.out.println("[CTEST][GET-PARAM][STDOUT] standaloneEnabled");
+	    return standaloneEnabled;
     }
     
     public static void setStandaloneEnabled(boolean enabled) {
         LOG.warn("[CTEST][SET-PARAM] standaloneEnabled" + getStackTrace());
+        System.out.println("[CTEST][SET-PARAM][STDOUT] standaloneEnabled" + getStackTrace());
         standaloneEnabled = enabled;
     }
 
@@ -836,10 +909,15 @@ public class QuorumPeerConfig {
         standaloneEnabled = enabled;
     }
 
-    public static boolean isReconfigEnabled() { LOG.warn("[CTEST][GET-PARAM] reconfigEnabled"); return reconfigEnabled; }
+    public static boolean isReconfigEnabled() {
+        LOG.warn("[CTEST][GET-PARAM] reconfigEnabled");
+        System.out.println("[CTEST][GET-PARAM][STDOUT] reconfigEnabled");
+        return reconfigEnabled;
+    }
 
     public static void setReconfigEnabled(boolean enabled) {
         LOG.warn("[CTEST][SET-PARAM] reconfigEnabled" + getStackTrace());
+        System.out.println("[CTEST][SET-PARAM][STDOUT] reconfigEnabled" + getStackTrace());
         reconfigEnabled = enabled;
     }
 

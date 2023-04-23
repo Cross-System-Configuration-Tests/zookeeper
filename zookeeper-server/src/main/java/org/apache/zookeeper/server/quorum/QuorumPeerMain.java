@@ -187,6 +187,7 @@ public class QuorumPeerMain {
           quorumPeer.setSyncEnabled(config.getSyncEnabled());
           quorumPeer.setQuorumListenOnAllIPs(config.getQuorumListenOnAllIPs());
           LOG.warn("[CTEST][GET-PARAM] sslQuorumReloadCertFiles");
+          System.out.println("[CTEST][GET-PARAM][STDOUT] sslQuorumReloadCertFiles");
           if (config.sslQuorumReloadCertFiles) {
               quorumPeer.getX509Util().enableCertFileReloading();
           }
@@ -194,20 +195,27 @@ public class QuorumPeerMain {
           // sets quorum sasl authentication configurations
           quorumPeer.setQuorumSaslEnabled(config.quorumEnableSasl);
           LOG.warn("[CTEST][GET-PARAM] quorum.auth.enableSasl");
+          System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.enableSasl");
           if(quorumPeer.isQuorumSaslAuthEnabled()){
               quorumPeer.setQuorumServerSaslRequired(config.quorumServerRequireSasl);
               LOG.warn("[CTEST][GET-PARAM] quorum.auth.serverRequireSasl");
+              System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.serverRequireSasl");
               quorumPeer.setQuorumLearnerSaslRequired(config.quorumLearnerRequireSasl);
               LOG.warn("[CTEST][GET-PARAM] quorum.auth.learnerRequireSasl");
+              System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.learnerRequireSasl");
               quorumPeer.setQuorumServicePrincipal(config.quorumServicePrincipal);
               LOG.warn("[CTEST][GET-PARAM] quorum.auth.kerberos.servicePrincipal");
+              System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.kerberos.servicePrincipal");
               quorumPeer.setQuorumServerLoginContext(config.quorumServerLoginContext);
               LOG.warn("[CTEST][GET-PARAM] quorum.auth.server.saslLoginContext");
+              System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.server.saslLoginContext");
               quorumPeer.setQuorumLearnerLoginContext(config.quorumLearnerLoginContext);
               LOG.warn("[CTEST][GET-PARAM] quorum.auth.learner.saslLoginContext");
+              System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.auth.learner.saslLoginContext");
           }
           quorumPeer.setQuorumCnxnThreadsSize(config.quorumCnxnThreadsSize);
           LOG.warn("[CTEST][GET-PARAM] quorum.cnxn.threads.size");
+          System.out.println("[CTEST][GET-PARAM][STDOUT] quorum.cnxn.threads.size");
           quorumPeer.initialize();
           
           quorumPeer.start();
